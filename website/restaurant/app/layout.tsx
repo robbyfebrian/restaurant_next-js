@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Quicksand } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "../features/component/Navbar";
 
-const quickSand = Quicksand({ subsets: ["latin"] });
+const poppins = Poppins({ weight: "300", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Restaurant",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${quickSand.className} antialiased`}>
+      <body className={`${poppins.className} antialiased bg-gradient-to-tr from-sky-300 to-sky-800`}>
         <Navbar />
         {children}
       </body>
